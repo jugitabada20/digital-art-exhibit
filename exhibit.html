@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In Sync Exhibit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">In Sync</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exhibit.html">Gallery</a>
+      <a href="artist.html">About Us</a>
+    </nav>
+  </header>
+
+  <section class="hero gallery-hero">
+    <div class="hero-content">
+      <h1>In Sync Exhibit</h1>
+      <p>Different beats, one creative flow.</p>
+    </div>
+  </section>
+
+  <section class="artist-section light">
+    <h2>Motion & Story</h2>
+    <p>Aimee is a multimedia artist who loves telling stories through short films and music videos. Her passion for cinematography led her to direct the award-winning short film <em>Huni.</em> </p>
+    <div class="gallery-row">
+      <img src="images/566616770_806788668934506_5948882719612383069_n.png" alt="Huni poster">
+      <img src="images/575223785_837821188696463_3907418218137069837_n.png" alt="Ligaya still">
+      <img src="images/553873773_1140360621625953_3314160874170383840_n.png" alt="Ako Lang Ba still">
+    </div>
+  </section>
+
+  <section class="artist-section dark">
+    <h2>Light & Memory</h2>
+    <p>Ian is a multimedia artist specializing in photography. He captures moments that tell quiet stories — finding beauty in light, detail, and the in-between.</p>
+    <div class="carousel">
+      <button class="carousel-btn left" aria-label="Previous">&#10094;</button>
+      <div class="carousel-track">
+        <img src="images/1.jpg" alt="">
+        <img src="images/2.jpg" alt="">
+        <img src="images/3.jpg" alt="">
+        <img src="images/4.jpg" alt="">
+        <img src="images/5.jpg" alt="">
+        <img src="images/6.jpg" alt="">
+      </div>
+      <button class="carousel-btn right" aria-label="Next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="artist-section light">
+    <h2>Form & Function</h2>
+    <p>Jugi is a multimedia artist specializing in graphic design. She focuses on creating visuals that blend clarity and creativity, turning simple ideas into striking designs.</p>
+    <div class="gallery-row">
+      <img src="images/camp1.png" alt="">
+      <img src="images/camp2.png" alt="">
+      <img src="images/camp3.png" alt="">
+    </div>
+  </section>
+
+  <div class="statement-btn">
+    <a href="artist.html" class="btn-outline">Read Artist Statement</a>
+  </div>
+
+</body>
+<script>
+// Simple carousel logic
+const track = document.querySelector('.carousel-track');
+const images = track ? Array.from(track.children) : [];
+let current = 0;
+
+function updateCarousel() {
+  images.forEach((img, i) => {
+    img.style.display = i === current ? 'block' : 'none';
+  });
+}
+
+document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
+  current = (current - 1 + images.length) % images.length;
+  updateCarousel();
+});
+document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
+  current = (current + 1) % images.length;
+  updateCarousel();
+});
+
+if (images.length) updateCarousel();
+</script>
+</html>

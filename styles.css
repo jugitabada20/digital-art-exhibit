@@ -1,0 +1,493 @@
+/* Reset and global styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffcf4;
+  color: #3a1c1c;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #a4161a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd6a5;
+}
+
+/* Home Page */
+.home {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: url('background.jpg') no-repeat center/cover;
+}
+
+.home h1 {
+  font-size: 3rem;
+  color: #a4161a;
+}
+
+.home p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  line-height: 1.5;
+}
+
+button, .btn {
+  padding: 5rem 2rem;
+  padding-bottom: 7rem; /* leave room for the button when absolutely positioned */
+  position: relative; /* so absolutely positioned child (.btn) is relative to hero */
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #6f0f0f;
+}
+
+/* Artist Statement Page */
+.artist-statement {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.artist-statement h1 {
+  font-size: 2.5rem;
+  color: #a4161a;
+  margin-bottom: 1.5rem;
+}
+
+.artist-statement p {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.artist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #a4161a;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer (optional for consistency) */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #a4161a;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f3e8;
+  color: #3a1c1c;
+}
+
+header {
+  background-color: #a4161a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Home Page */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('images/Frame\ 18.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 5rem 2rem;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Use a different image for gallery hero if needed */
+.gallery-hero {
+  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/bg.jpg');
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: #fff; /* brighter on top of image */
+}
+
+.hero-content p {
+  margin: 1.5rem auto;
+  max-width: 600px;
+  color: #fff; /* brighter on top of image */
+  font-weight: 500;
+}
+
+.btn {
+  background-color: #a4161a;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #7e1013;
+}
+
+/* Position the hero button centered and lower in the hero area */
+.hero .btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-bottom: 5rem;
+  }
+  .hero .btn {
+    bottom: 1.25rem;
+    padding: 0.7rem 1.4rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+footer.artists {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #7b1414;
+}
+
+.artist-tag span {
+  margin-right: 0.3rem;
+}
+
+/* Exhibit Page */
+.exhibit-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f3e9c6;
+}
+
+.exhibit-header h1 {
+  color: #7b1414;
+  font-size: 2.5rem;
+}
+
+/* New exhibit hero section with photo */
+.exhibit-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: #f3e9c6;
+  padding: 3rem 1rem 2rem 1rem;
+}
+
+.exhibit-hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.exhibit-hero-img {
+  width: 320px;
+  max-width: 40vw;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+.exhibit-hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.exhibit-hero-text h1 {
+  color: #7b1414;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.exhibit-hero-text p {
+  font-size: 1.15rem;
+  color: #7b1414;
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .exhibit-hero-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .exhibit-hero-img {
+    width: 90vw;
+    max-width: 95vw;
+  }
+  .exhibit-hero-text {
+    text-align: center;
+  }
+}
+
+.artist-section {
+  padding: 3rem 2rem;
+}
+
+.artist-section.light {
+  background: #f7f3e8;
+}
+
+.artist-section.dark {
+  background: #a4161a;
+  color: #fff;
+}
+
+.artist-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.artist-section p {
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-row img, .gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-row img:hover, .gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+/* Carousel styles for Light & Memory section */
+.carousel {
+  position: relative;
+  max-width: 340px;
+  margin: 2rem auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  width: 320px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.carousel-btn {
+  background: #a4161a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.85;
+  transition: background 0.2s;
+}
+.carousel-btn.left {
+  left: -18px;
+}
+.carousel-btn.right {
+  right: -18px;
+}
+.carousel-btn:hover {
+  background: #7e1013;
+}
+
+@media (max-width: 500px) {
+  .carousel-track {
+    width: 90vw;
+    height: 40vw;
+    min-height: 120px;
+    max-width: 98vw;
+  }
+  .carousel {
+    max-width: 98vw;
+  }
+}
+
+.statement-btn {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.btn-outline {
+  border: 2px solid #a4161a;
+  color: #a4161a;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background-color: #a4161a;
+  color: #fff;
+}
+.artist-statement {
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('images/5.jpg') center/cover no-repeat;
+  color: #3a1c1c;
+  text-align: center;
+  min-height: 70vh;
+  position: relative;
+}
+
+.artist-statement h1 {
+  font-size: 2.5rem;
+  color: #a4161a;
+  margin-bottom: 1.5rem;
+}
+
+.artist-statement p {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.artist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #a4161a;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.back-btn {
+  margin-top: 3rem;
+}
