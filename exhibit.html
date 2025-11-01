@@ -36,17 +36,13 @@
   <section class="artist-section dark">
     <h2>Light & Memory</h2>
     <p>Ian is a multimedia artist specializing in photography. He captures moments that tell quiet stories — finding beauty in light, detail, and the in-between.</p>
-    <div class="carousel">
-      <button class="carousel-btn left" aria-label="Previous">&#10094;</button>
-      <div class="carousel-track">
-        <img src="images/1.jpg" alt="">
-        <img src="images/2.jpg" alt="">
-        <img src="images/3.jpg" alt="">
-        <img src="images/4.jpg" alt="">
-        <img src="images/5.jpg" alt="">
-        <img src="images/6.jpg" alt="">
-      </div>
-      <button class="carousel-btn right" aria-label="Next">&#10095;</button>
+    <div class="gallery-grid">
+      <img src="images/1.jpg" alt="">
+      <img src="images/2.jpg" alt="">
+      <img src="images/3.jpg" alt="">
+      <img src="images/4.jpg" alt="">
+      <img src="images/5.jpg" alt="">
+      <img src="images/6.jpg" alt="">
     </div>
   </section>
 
@@ -65,27 +61,4 @@
   </div>
 
 </body>
-<script>
-// Simple carousel logic
-const track = document.querySelector('.carousel-track');
-const images = track ? Array.from(track.children) : [];
-let current = 0;
-
-function updateCarousel() {
-  images.forEach((img, i) => {
-    img.style.display = i === current ? 'block' : 'none';
-  });
-}
-
-document.querySelector('.carousel-btn.left')?.addEventListener('click', () => {
-  current = (current - 1 + images.length) % images.length;
-  updateCarousel();
-});
-document.querySelector('.carousel-btn.right')?.addEventListener('click', () => {
-  current = (current + 1) % images.length;
-  updateCarousel();
-});
-
-if (images.length) updateCarousel();
-</script>
 </html>
